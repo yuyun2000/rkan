@@ -9,7 +9,7 @@
 运行train.py将训练一个模型并保存在cp目录下
 - 模型导出
 
-运行export_onnx.py将导出kan.onnx
+运行export_onnx.py将导出kan.onnx（运行check_op.py可以查看算子及限制）
 
 ### 板端
 将rk目录下的文件放至开发板，注意修改其中的设备类型和设备ip，理论上rknntoolkit2的设备均可
@@ -44,3 +44,5 @@
         t2 = xtemp < grid[:, 1:]
         bases = (t1 & t2).to(x.dtype)
 ```
+
+
